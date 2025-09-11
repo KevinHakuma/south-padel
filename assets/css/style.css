@@ -9,6 +9,7 @@
 /* ==== ROOT VARS ==== */
 :root{
   --brand: #0f3d2e;
+  --beige: #f5f5dc;
 
   /* Hero essentials */
   --hero-h: 100vh;
@@ -100,7 +101,7 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 .menu-toggle span{
-  position:absolute; width:26px; height:3px; border-radius:2px; background:#fff;
+  position:absolute; width:26px; height:3px; border-radius:2px; background: var(--beige);
   transition: transform .3s ease, opacity .3s ease, background .3s ease;
 }
 .menu-toggle span:nth-child(1){ transform: translateY(-8px); }
@@ -262,7 +263,7 @@ html, body {
   position: relative;
   scroll-margin-top: 120px;                  /* nyaman saat di-anchor */
   padding: clamp(56px, 8vw, 110px) 5vw;
-  background: #fff;                          /* kontras setelah hero gelap */
+  background: var(--beige);                          /* kontras setelah hero gelap */
   color: #0f3d2e;
   z-index: 1;
 }
@@ -431,8 +432,8 @@ html, body {
 .courts {
   position: relative;
   z-index: 0;                  /* di atas hero video/overlay */
-  background: linear-gradient(135deg,#0d3b2e 0%,#1e4d3a 100%); /* ganti sesuai selera */
-  color: #fff;
+  background: var(--brand); /* ganti sesuai selera */
+  color: var(--beige);
   padding: clamp(56px,8vw,110px) 5vw;
   scroll-margin-top: 120px;
 }
@@ -442,13 +443,13 @@ html, body {
   text-align: center;
 }
 .courts__eyebrow{
-  color: #fff;
+  color: var(--beige);
   font-family:'CormorantGaramond', serif;
   letter-spacing:.35em; text-indent:.35em;
   font-weight:600; opacity:.85; margin:0 0 .4rem;
 }
 .courts__title{
-  color: #fff;
+  color: var(--beige);
   font-family:'CormorantGaramond', serif;
   font-weight:600; line-height:1.1;
   font-size: clamp(28px,4.2vw,46px);
@@ -456,7 +457,7 @@ html, body {
 }
 .courts__lead{
   margin:0 auto 14px; max-width:740px;
-  color:#fff; line-height:1.7;
+  color:var(--beige); line-height:1.7;
 }
 
 .courts__grid {
@@ -565,6 +566,88 @@ html, body {
   .hero-content{ transform: none !important; }
 }
 
+/* ===== FACILITY ===== */
+.facility {
+  background:var(--beige);
+  color:var(--brand);
+  padding: clamp(56px,8vw,100px) 5vw;
+  scroll-margin-top: 120px;
+  z-index: 999;
+  position: relative;
+}
+
+.facility__head {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.facility__eyebrow {
+  font-family:'CormorantGaramond', serif;
+  letter-spacing:.35em;
+  text-indent:.35em;
+  font-weight:600;
+  opacity:.8;
+  margin:0 0 .4rem;
+  color:var(--brand);
+}
+
+.facility__title {
+  font-family:'CormorantGaramond', serif;
+  font-weight:600;
+  line-height:1.1;
+  font-size: clamp(28px,4vw,46px);
+  margin:0 0 .5rem;
+}
+
+.facility__lead {
+  margin:0 auto 14px;
+  max-width:600px;
+  color:var(--brand);
+  line-height:1.6;
+}
+
+.facility__grid {
+  max-width:1200px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: clamp(16px,2vw,28px);
+}
+
+.facility__item {
+  background:#fbfbf0; /* Soft beige agar konsisten */
+  border-radius:20px;
+  padding:28px 22px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,.06);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.facility__item:hover {
+  transform:translateY(-6px);
+  box-shadow:0 16px 30px rgba(0,0,0,.12);
+}
+
+.facility__icon {
+  font-size:2.5rem;
+  margin-bottom:12px;
+}
+
+.facility__name {
+  font-family:'CormorantGaramond', serif;
+  font-size:1.25rem;
+  font-weight:600;
+  margin:0 0 8px;
+}
+
+.facility__desc {
+  font-size:.95rem;
+  line-height:1.5;
+  color:#2b3a33;
+}
+
+
 
 
 .about::before{
@@ -574,6 +657,13 @@ html, body {
   pointer-events:none;
 }
 .courts::before{
+  content:"";
+  position:absolute; inset:0;
+  background: inherit;         /* pakai bg yang sama */
+  z-index: -1;                 /* di bawah konten courts, tapi tetap di atas video hero */
+}
+
+.facility::before{
   content:"";
   position:absolute; inset:0;
   background: inherit;         /* pakai bg yang sama */
