@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Padel</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar" id="navbar">
+    <div class="logo">South Padel</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Layouts</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#" class="cta">Book Now</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </div>
+</div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+      <source src="assets/video/hero.webm" type="video/webm">
+      Browser kamu tidak mendukung video background.
+    </video>
+
+    <div class="hero-inner">
+      <div class="hero-content" id="heroContent">
+        <p class="hero-tag">WELCOME TO</p>
+        <img src="assets/img/herologo.png" alt="South Padel" class="hero-title">
+        <p class="hero-sub">COURT &amp; CAFE</p>
+        <a href="#booking" class="btn-hero">Book Now</a>
+      </div>
+
+      <div class="scroll-hint">SCROLL</div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about" class="about">
+    <div class="about__container">
+      <!-- Media / Photo -->
+      <div class="about__media">
+        <!-- Ganti src dengan fotomu -->
+        <div class="about__photo-wrap">
+          <img src="assets/img/about.webp" alt="South Padel — court & cafe" class="about__photo">
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about__content">
+        <p class="about__eyebrow">ABOUT US</p>
+        <h2 class="about__title">A calm place for padel, coffee, and community</h2>
+
+        <p class="about__lead">
+          South Padel offers <em>premium indoor courts</em>, coaching, and a warm café atmosphere.
+          We believe sport is an experience from the game itself to the conversations and the time
+          you spend unwinding afterward.
+        </p>
+
+        <ul class="about__list">
+          <li>6 premium indoor courts (pro-standard)</li>
+          <li>Café &amp; lounge with Wi-Fi and a signature menu</li>
+          <li>Weekly coaching &amp; community events</li>
+        </ul>
+
+        <div class="about__stats">
+          <div class="stat">
+            <span class="num">6</span>
+            <span class="label">Indoor Courts</span>
+          </div>
+          <div class="stat">
+            <span class="num">100+</span>
+            <span class="label">Members</span>
+          </div>
+          <div class="stat">
+            <span class="num">10–24</span>
+            <span class="label">Open Daily</span>
+          </div>
+        </div>
+
+        <a href="#booking" class="about__cta">Book a Court</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURT AVAILABLE -->
+  <section id="courts" class="courts">
+    <div class="courts__head">
+      <p class="courts__eyebrow">COURT AVAILABLE</p>
+      <h2 class="courts__title">Check today’s courts</h2>
+      <p class="courts__lead">Pick a court and time slot that fits your schedule.</p>
+    </div>
+
+    <div class="courts__grid">
+      <!-- Card A -->
+      <article class="court">
+        <div class="court__media">
+          <img src="assets/img/court.webp" alt="Indoor Court A">
+        </div>
+        <div class="court__body">
+          <div class="court__row">
+            <h3 class="court__name">Indoor Court A</h3>
+            <span class="badge is-available">Available</span>
+          </div>
+          <ul class="court__meta">
+            <li>Surface: Synthetic Turf</li>
+            <li>Format: Doubles (2v2)</li>
+          </ul>
+
+          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court A">
+            <button class="slot is-available" data-time="08:00">08:00</button>
+            <button class="slot is-available" data-time="09:00">09:00</button>
+            <button class="slot is-booked" disabled>10:00</button>
+            <button class="slot is-available" data-time="11:00">11:00</button>
+            <button class="slot is-available" data-time="12:00">12:00</button>
+          </div>
+
+          <a href="#booking" class="about__cta court__cta" aria-disabled="true">Book a Court</a>
+        </div>
+      </article>
+
+      <!-- Card B -->
+      <article class="court">
+        <div class="court__media">
+          <img src="assets/img/court.webp" alt="Indoor Court B">
+        </div>
+        <div class="court__body">
+          <div class="court__row">
+            <h3 class="court__name">Indoor Court B</h3>
+            <span class="badge is-limited">Limited</span>
+          </div>
+          <ul class="court__meta">
+            <li>Surface: Acrylic</li>
+            <li>Format: Doubles (2v2)</li>
+          </ul>
+
+          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court B">
+            <button class="slot is-booked" disabled>08:00</button>
+            <button class="slot is-available" data-time="09:00">09:00</button>
+            <button class="slot is-available" data-time="10:00">10:00</button>
+            <button class="slot is-booked" disabled>11:00</button>
+            <button class="slot is-available" data-time="12:00">12:00</button>
+          </div>
+
+          <a href="#booking" class="about__cta court__cta" aria-disabled="true">Book a Court</a>
+        </div>
+      </article>
+
+      <!-- Card C -->
+      <article class="court">
+        <div class="court__media">
+          <img src="assets/img/court.webp" alt="Indoor Court C">
+        </div>
+        <div class="court__body">
+          <div class="court__row">
+            <h3 class="court__name">Indoor Court C</h3>
+            <span class="badge is-full">Fully Booked</span>
+          </div>
+          <ul class="court__meta">
+            <li>Surface: Synthetic Turf</li>
+            <li>Format: Singles & Doubles</li>
+          </ul>
+
+          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court C">
+            <button class="slot is-booked" disabled>08:00</button>
+            <button class="slot is-booked" disabled>09:00</button>
+            <button class="slot is-booked" disabled>10:00</button>
+            <button class="slot is-booked" disabled>11:00</button>
+            <button class="slot is-booked" disabled>12:00</button>
+          </div>
+
+          <a href="#booking" class="about__cta court__cta is-disabled" aria-disabled="true">Join Waitlist</a>
+        </div>
+      </article>
+
+      <!-- Card D -->
+      <article class="court">
+        <div class="court__media">
+          <img src="assets/img/court.webp" alt="Indoor Court D">
+        </div>
+        <div class="court__body">
+          <div class="court__row">
+            <h3 class="court__name">Indoor Court D</h3>
+            <span class="badge is-available">Available</span>
+          </div>
+          <ul class="court__meta">
+            <li>Surface: Acrylic</li>
+            <li>Format: Doubles (2v2)</li>
+          </ul>
+
+          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court D">
+            <button class="slot is-available" data-time="08:00">08:00</button>
+            <button class="slot is-booked" disabled>09:00</button>
+            <button class="slot is-available" data-time="10:00">10:00</button>
+            <button class="slot is-available" data-time="11:00">11:00</button>
+            <button class="slot is-available" data-time="12:00">12:00</button>
+          </div>
+
+          <a href="#booking" class="about__cta court__cta">Book a Court</a>
+        </div>
+      </article>
+
+      <!-- Card E -->
+      <article class="court">
+        <div class="court__media">
+          <img src="assets/img/court.webp" alt="Indoor Court E">
+        </div>
+        <div class="court__body">
+          <div class="court__row">
+            <h3 class="court__name">Indoor Court E</h3>
+            <span class="badge is-limited">Limited</span>
+          </div>
+          <ul class="court__meta">
+            <li>Surface: Synthetic Turf</li>
+            <li>Format: Singles & Doubles</li>
+          </ul>
+
+          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court E">
+            <button class="slot is-available" data-time="08:00">08:00</button>
+            <button class="slot is-available" data-time="09:00">09:00</button>
+            <button class="slot is-booked" disabled>10:00</button>
+            <button class="slot is-booked" disabled>11:00</button>
+            <button class="slot is-available" data-time="12:00">12:00</button>
+          </div>
+
+          <a href="#booking" class="about__cta court__cta">Book a Court</a>
+        </div>
+      </article>
+
+      <!-- Card F -->
+      <article class="court">
+        <div class="court__media">
+          <img src="assets/img/court.webp" alt="Indoor Court F">
+        </div>
+        <div class="court__body">
+          <div class="court__row">
+            <h3 class="court__name">Indoor Court F</h3>
+            <span class="badge is-available">Available</span>
+          </div>
+          <ul class="court__meta">
+            <li>Surface: Acrylic</li>
+            <li>Format: Doubles (2v2)</li>
+          </ul>
+
+          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court F">
+            <button class="slot is-booked" disabled>08:00</button>
+            <button class="slot is-available" data-time="09:00">09:00</button>
+            <button class="slot is-available" data-time="10:00">10:00</button>
+            <button class="slot is-available" data-time="11:00">11:00</button>
+            <button class="slot is-available" data-time="12:00">12:00</button>
+          </div>
+
+          <a href="#booking" class="about__cta court__cta">Book a Court</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+
+  
+
+  <script>
+    // Pastikan DOM siap
+    (function(){
+      const navbar = document.getElementById('navbar');
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      // efek scroll
+      const onScroll = () => {
+        if (window.scrollY > 100) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+
+      // toggle mobile menu
+      const toggleMenu = (e) => {
+        e.stopPropagation();
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('show');
+        const open = menuToggle.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', String(open));
+      };
+      menuToggle.addEventListener('click', toggleMenu);
+
+      // klik di luar untuk tutup
+      document.addEventListener('click', (e) => {
+        const clickedInside = navbar.contains(e.target);
+        if (!clickedInside && navLinks.classList.contains('show')) {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('show');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // cegah panel menutupi tombol saat tertutup (safeguard)
+      navLinks.style.pointerEvents = 'auto';
+
+
+    })();
+  </script>
+  
+  <script>
+    // Parallax: konten bergerak halus, video tetap fixed di belakang
+    (function(){
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      const hero    = document.querySelector('.hero');
+      const content = document.getElementById('heroContent');
+      if (!hero || !content) return;
+
+      const STRENGTH = 0.12; // 0.06–0.18 (lebih besar = lebih terasa)
+
+      function update(){
+        const r = hero.getBoundingClientRect();
+        const y = Math.min(Math.max(-r.top, 0), r.height); // 0..height saat hero terlihat
+
+        // Parallax move
+        content.style.transform = `translateY(${-y * STRENGTH}px)`;
+
+        // (opsional) sedikit fade supaya elegan
+        const prog = y / (r.height || 1);
+        content.style.opacity = String(1 - prog * 0.12);
+      }
+
+      let ticking = false;
+      function onScroll(){
+        if (!ticking){
+          requestAnimationFrame(() => { update(); ticking = false; });
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive:true });
+      window.addEventListener('resize', onScroll, { passive:true });
+      update(); // posisi awal
+    })();
+  </script>
+
+  <script>
+    (function(){
+      const cards = document.querySelectorAll('.court');
+      cards.forEach(card=>{
+        const cta   = card.querySelector('.court__cta');
+        const slots = card.querySelectorAll('.slot.is-available');
+
+        slots.forEach(btn=>{
+          btn.addEventListener('click', ()=>{
+            // reset pilihan di card ini
+            slots.forEach(b=>{ b.classList.remove('is-selected'); b.removeAttribute('aria-selected'); });
+            // pilih yang diklik
+            btn.classList.add('is-selected'); btn.setAttribute('aria-selected','true');
+            // aktifkan CTA
+            cta.removeAttribute('aria-disabled');
+            cta.classList.remove('is-disabled');
+            cta.textContent = `Book ${btn.dataset.time}`;
+          });
+        });
+      });
+    })();
+  </script>
+
+
+
+</body>
+</html>

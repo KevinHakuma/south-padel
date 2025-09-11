@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Parallax Fixed Background</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Hero section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+
+      background-image: url('assets/video/hero.mp4'); /* ganti dengan gambar kamu */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* <-- ini yang bikin gambar tetap */
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    /* Section konten berikut */
+    .section {
+      padding: 80px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .section:nth-child(even) {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div>
+      <h1>South Padel</h1>
+      <p>Court & Café dengan nuansa premium</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Kenapa Memilih Kami?</h2>
+    <p>Lapangan internasional, café cozy, dan komunitas yang solid.</p>
+  </section>
+
+  <section class="section">
+    <h2>Booking Mudah</h2>
+    <p>Integrasi langsung dengan website kamu.</p>
+  </section>
+
+</body>
+</html>
