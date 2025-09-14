@@ -7,6 +7,9 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
 </head>
 <body>
 
@@ -15,11 +18,16 @@
     <div class="logo">South Padel</div>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="#">Overview</a></li>
-      <li><a href="#">Layouts</a></li>
-      <li><a href="#">Pages</a></li>
-      <li><a href="#" class="cta">Book Now</a></li>
+      <li><a href="#courts">Courts</a></li>
+      <li><a href="#facility">Facilities</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#coaching">Coaching</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="cta">Book Now</a></li>
     </ul>
+
 
     <div class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -28,8 +36,8 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <!-- Video Background -->
-    <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+    <!-- Video Background (LAZY) -->
+    <video autoplay muted loop playsinline preload="auto">
       <source src="assets/video/hero.mp4" type="video/mp4">
       <source src="assets/video/hero.webm" type="video/webm">
       Browser kamu tidak mendukung video background.
@@ -38,11 +46,10 @@
     <div class="hero-inner">
       <div class="hero-content" id="heroContent">
         <p class="hero-tag">WELCOME TO</p>
-        <img src="assets/img/herologo.png" alt="South Padel" class="hero-title">
+        <img src="assets/img/herologo.png" alt="South Padel" class="hero-title" loading="lazy">
         <p class="hero-sub">COURT &amp; CAFE</p>
         <a href="#booking" class="btn-hero">Book Now</a>
       </div>
-
       <div class="scroll-hint">SCROLL</div>
     </div>
   </section>
@@ -54,7 +61,7 @@
       <div class="about__media">
         <!-- Ganti src dengan fotomu -->
         <div class="about__photo-wrap">
-          <img src="assets/img/about.webp" alt="South Padel — court & cafe" class="about__photo">
+          <img src="assets/img/about.webp" alt="South Padel — court & cafe" class="about__photo" loading="lazy">
         </div>
       </div>
 
@@ -106,7 +113,7 @@
     <div class="courts__grid">
       <!-- A -->
       <article class="court">
-        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court A"></div>
+        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court A" loading="lazy"></div>
         <div class="court__body">
           <div class="court__row">
             <h3 class="court__name">Indoor Court A</h3>
@@ -357,6 +364,516 @@
     </div>
   </section>
 
+  <!-- MEMBERSHIP PRICING -->
+  <section id="membership" class="mships">
+    <div class="mships__head">
+      <p class="mships__eyebrow">MEMBERSHIP</p>
+      <h2 class="mships__title">Choose Your Membership</h2>
+      <p class="mships__lead">Enjoy exclusive court discounts, café deals, and premium benefits.</p>
+    </div>
+
+    <div class="mships__grid">
+      <!-- BASIC -->
+      <article class="mcard">
+        <span class="mcard__ribbon">SAVE 40%</span>
+        <h3 class="mcard__name">Basic</h3>
+
+        <div class="mcard__price">
+          <div class="mcard__was">Rp299.000 / month</div>
+          <div class="mcard__now"><span>Rp</span>179.000<span>/month</span></div>
+        </div>
+
+        <button class="mcard__cta">Select</button>
+
+        <ul class="mcard__feat">
+          <li>10% discount on court (weekdays)</li>
+          <li>5% discount at café</li>
+          <li>1 guest pass per month</li>
+        </ul>
+      </article>
+
+      <!-- GOLD -->
+      <article class="mcard is-popular">
+        <span class="mcard__ribbon">BEST VALUE</span>
+        <h3 class="mcard__name">Gold</h3>
+
+        <div class="mcard__price">
+          <div class="mcard__was">Rp449.000 / month</div>
+          <div class="mcard__now"><span>Rp</span>289.000<span>/month</span></div>
+        </div>
+
+        <button class="mcard__cta">Select</button>
+
+        <ul class="mcard__feat">
+          <li>15% discount on court (all day)</li>
+          <li>10% discount at café</li>
+          <li>Free locker access</li>
+          <li>2 guest passes per month</li>
+        </ul>
+      </article>
+
+      <!-- PLATINUM -->
+      <article class="mcard">
+        <span class="mcard__ribbon">SAVE 35%</span>
+        <h3 class="mcard__name">Platinum</h3>
+
+        <div class="mcard__price">
+          <div class="mcard__was">Rp699.000 / month</div>
+          <div class="mcard__now"><span>Rp</span>449.000<span>/month</span></div>
+        </div>
+
+        <button class="mcard__cta">Select</button>
+
+        <ul class="mcard__feat">
+          <li>20% discount on court (all day)</li>
+          <li>15% discount at café</li>
+          <li>Locker & laundry included</li>
+          <li>4 guest passes per month</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- GALLERY (Carousel) -->
+  <section id="gallery" class="gallery">
+    <div class="gallery__head">
+      <p class="gallery__eyebrow">GALLERY</p>
+      <h2 class="gallery__title">Experience South Padel</h2>
+      <p class="gallery__lead">Courts, café, and community highlights.</p>
+    </div>
+
+    <div class="gwrap">
+      <button class="gbtn gbtn--prev" aria-label="Previous">
+        ‹
+      </button>
+
+      <div class="gtrack" id="gtrack" aria-label="Image carousel">
+        <!-- gunakan satu sumber dummy berulang -->
+        <figure class="gslide">
+          <img src="assets/img/gallery/gallery.webp" alt="South Padel — view 1" loading="lazy">
+        </figure>
+        <figure class="gslide">
+          <img src="assets/img/gallery/gallery.webp" alt="South Padel — view 2" loading="lazy">
+        </figure>
+        <figure class="gslide">
+          <img src="assets/img/gallery/gallery.webp" alt="South Padel — view 3" loading="lazy">
+        </figure>
+        <figure class="gslide">
+          <img src="assets/img/gallery/gallery.webp" alt="South Padel — view 4" loading="lazy">
+        </figure>
+        <figure class="gslide">
+          <img src="assets/img/gallery/gallery.webp" alt="South Padel — view 5" loading="lazy">
+        </figure>
+      </div>
+      <div class="gprogress" aria-hidden="true">
+        <div class="gbar"></div>
+      </div>
+
+      <button class="gbtn gbtn--next" aria-label="Next">
+        ›
+      </button>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONY -->
+  <section id="testimony" class="testimony" itemscope itemtype="https://schema.org/ItemList">
+    <meta itemprop="name" content="South Padel Testimonials">
+    <div class="testimony__head">
+      <p class="testimony__eyebrow">TESTIMONY</p>
+      <h2 class="testimony__title">What Players Say</h2>
+      <p class="testimony__lead">Real experiences from our members and guests.</p>
+    </div>
+
+    <div class="twrap">
+      <button class="tbtn tbtn--prev" aria-label="Previous">‹</button>
+
+      <div class="ttrack" id="ttrack" aria-label="Testimonials carousel" role="list">
+        <!-- Card 1 -->
+        <article class="tcard" role="listitem" itemscope itemprop="itemListElement" itemtype="https://schema.org/Review">
+          <div class="tcard__row">
+            <img class="tcard__avatar" src="assets/img/avatars/ava.webp" alt="User avatar" loading="lazy">
+            <div>
+              <h3 class="tcard__name" itemprop="author">Rama Pratama</h3>
+              <div class="tcard__role">Amateur Player</div>
+            </div>
+          </div>
+          <p class="tcard__quote" itemprop="reviewBody">
+            “Courts are top-notch and the café is my post-game ritual. Staffs are super friendly!”
+          </p>
+          <div class="tcard__stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="5 out of 5">
+            <meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5">
+            ★★★★★
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="tcard" role="listitem" itemscope itemprop="itemListElement" itemtype="https://schema.org/Review">
+          <div class="tcard__row">
+            <img class="tcard__avatar" src="assets/img/avatars/ava.webp" alt="User avatar" loading="lazy">
+            <div>
+              <h3 class="tcard__name" itemprop="author">Michelle Tan</h3>
+              <div class="tcard__role">Weekend Warrior</div>
+            </div>
+          </div>
+          <p class="tcard__quote" itemprop="reviewBody">
+            “Great lighting and consistent bounce—perfect for evening matches.”
+          </p>
+          <div class="tcard__stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="4.5 out of 5">
+            <meta itemprop="ratingValue" content="4.5"><meta itemprop="bestRating" content="5">
+            ★★★★☆
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="tcard" role="listitem" itemscope itemprop="itemListElement" itemtype="https://schema.org/Review">
+          <div class="tcard__row">
+            <img class="tcard__avatar" src="assets/img/avatars/ava.webp" alt="User avatar" loading="lazy">
+            <div>
+              <h3 class="tcard__name" itemprop="author">Dio Kurnia</h3>
+              <div class="tcard__role">League Player</div>
+            </div>
+          </div>
+          <p class="tcard__quote" itemprop="reviewBody">
+            “Easy booking, clean lockers, and the latte is dangerously good.”
+          </p>
+          <div class="tcard__stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="5 out of 5">
+            <meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5">
+            ★★★★★
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="tcard" role="listitem" itemscope itemprop="itemListElement" itemtype="https://schema.org/Review">
+          <div class="tcard__row">
+            <img class="tcard__avatar" src="assets/img/avatars/ava.webp" alt="User avatar" loading="lazy">
+            <div>
+              <h3 class="tcard__name" itemprop="author">Naya Putri</h3>
+              <div class="tcard__role">Beginner</div>
+            </div>
+          </div>
+          <p class="tcard__quote" itemprop="reviewBody">
+            “Tried padel for the first time—staff helped with gear and rules. Super fun!”
+          </p>
+          <div class="tcard__stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="4 out of 5">
+            <meta itemprop="ratingValue" content="4"><meta itemprop="bestRating" content="5">
+            ★★★★☆
+          </div>
+        </article>
+      </div>
+
+      <button class="tbtn tbtn--next" aria-label="Next">›</button>
+
+      <!-- progress bar -->
+      <div class="tprogress" aria-hidden="true"><div class="tbar"></div></div>
+    </div>
+  </section>
+
+  <!-- COACHING – Version 1 (Slider on top, Programs below) -->
+<section id="coaching" class="coachv1">
+  <!-- Slider Head -->
+  <header class="coachv1__head">
+    <p class="coachv1__eyebrow">OUR COACHES</p>
+    <h2 class="coachv1__title">Level up with our coaches</h2>
+    <p class="coachv1__lead">Certified trainers ready to guide you from first steps to league play.</p>
+  </header>
+
+  <!-- Coach Slider -->
+  <div class="cwrap">
+    <button class="cbtn is-prev" aria-label="Previous">‹</button>
+    <div class="ctrack" id="coachTrack" aria-label="Coach profiles">
+      <!-- Slide 1 -->
+      <article class="cslide">
+        <img src="assets/img/coach/coach.webp" alt="Andra Prakoso" class="cslide__photo" loading="lazy">
+        <div class="cslide__body">
+          <h3 class="cslide__name">Andra Prakoso</h3>
+          <p class="cslide__role">Head Coach • ITF Certified</p>
+          <p class="cslide__desc">8+ years experience. Focus on footwork, positioning & tactical play.</p>
+          <ul class="cslide__tags"><li>Adults</li><li>League Prep</li><li>Strategy</li></ul>
+        </div>
+      </article>
+      <!-- Slide 2 -->
+      <article class="cslide">
+        <img src="assets/img/coach/coach.webp" alt="Mira Setiana" class="cslide__photo" loading="lazy">
+        <div class="cslide__body">
+          <h3 class="cslide__name">Mira Setiana</h3>
+          <p class="cslide__role">Senior Coach • PTR</p>
+          <p class="cslide__desc">Technique-first approach for consistent, injury-free progress.</p>
+          <ul class="cslide__tags"><li>Beginners</li><li>Teens</li><li>Fundamentals</li></ul>
+        </div>
+      </article>
+      <!-- Slide 3 -->
+      <article class="cslide">
+        <img src="assets/img/coach/coach.webp" alt="Rio Hartanto" class="cslide__photo" loading="lazy">
+        <div class="cslide__body">
+          <h3 class="cslide__name">Rio Hartanto</h3>
+          <p class="cslide__role">Performance Coach</p>
+          <p class="cslide__desc">Drill-based sessions for speed, reaction & doubles coordination.</p>
+          <ul class="cslide__tags"><li>Performance</li><li>Doubles</li><li>Footwork</li></ul>
+        </div>
+      </article>
+    </div>
+    <button class="cbtn is-next" aria-label="Next">›</button>
+  </div>
+
+  <!-- Programs -->
+  <header class="coachv1__subhead">
+    <p class="coachv1__eyebrow">COACHING PROGRAMS</p>
+  </header>
+  <div class="cprogs">
+    <article class="cprog">
+      <h3 class="cprog__name">Beginner Group</h3>
+      <p class="cprog__desc">Footwork, groundstrokes, serve & return. Max 6 players.</p>
+      <div class="cprog__meta"><span>60 mins</span><span>Rp180.000 / person</span><span>Mon–Thu</span></div>
+      <a href="#contact" class="cprog__cta">Enroll</a>
+    </article>
+    <article class="cprog">
+      <h3 class="cprog__name">Intermediate Drills</h3>
+      <p class="cprog__desc">Consistency, net play, tactical patterns. Max 4 players.</p>
+      <div class="cprog__meta"><span>75 mins</span><span>Rp240.000 / person</span><span>Tue–Sat</span></div>
+      <a href="#contact" class="cprog__cta">Enroll</a>
+    </article>
+    <article class="cprog">
+      <h3 class="cprog__name">Private Session</h3>
+      <p class="cprog__desc">1-on-1 custom plan with video feedback. Flexible schedule.</p>
+      <div class="cprog__meta"><span>60–90 mins</span><span>From Rp450.000</span><span>By appointment</span></div>
+      <a href="#contact" class="cprog__cta">Book Private</a>
+    </article>
+  </div>
+</section>
+
+<!-- ===== BLOG / NEWS ===== -->
+<section id="blog" class="blog">
+  <div class="blog__head">
+    <p class="blog__eyebrow">BLOG & NEWS</p>
+    <h2 class="blog__title">Latest Updates</h2>
+    <p class="blog__lead">Stay informed with our events, promotions, and stories from South Padel.</p>
+  </div>
+
+  <div class="blog__grid">
+    <!-- Post A -->
+    <article class="post">
+      <div class="post__media">
+        <img src="assets/img/blog/blog.webp" alt="Opening Tournament">
+      </div>
+      <div class="post__body">
+        <span class="post__date">Sep 10, 2025</span>
+        <h3 class="post__title">Grand Opening Tournament</h3>
+        <p class="post__excerpt">We celebrated our opening with a friendly padel tournament featuring players of all levels...</p>
+        <a href="#" class="post__cta">Read more →</a>
+      </div>
+    </article>
+
+    <!-- Post B -->
+    <article class="post">
+      <div class="post__media">
+        <img src="assets/img/blog/blog.webp" alt="Membership Promo">
+      </div>
+      <div class="post__body">
+        <span class="post__date">Aug 28, 2025</span>
+        <h3 class="post__title">Exclusive Membership Promo</h3>
+        <p class="post__excerpt">Join now and enjoy discounts on court bookings plus café vouchers for every session...</p>
+        <a href="#" class="post__cta">Read more →</a>
+      </div>
+    </article>
+
+    <!-- Post C -->
+    <article class="post">
+      <div class="post__media">
+        <img src="assets/img/blog/blog.webp" alt="Junior Coaching Program">
+      </div>
+      <div class="post__body">
+        <span class="post__date">Aug 15, 2025</span>
+        <h3 class="post__title">New Junior Coaching Program</h3>
+        <p class="post__excerpt">Structured training for kids and teens designed to improve fundamentals while having fun...</p>
+        <a href="#" class="post__cta">Read more →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact__head">
+    <p class="contact__eyebrow">CONTACT</p>
+    <h2 class="contact__title">Let’s talk & book a court</h2>
+    <p class="contact__lead">Questions, group bookings, events, or coaching — we’re here to help.</p>
+  </div>
+
+  <div class="contact__grid">
+    <!-- Info -->
+    <aside class="cinfo" aria-label="South Padel contact information">
+      <h3 class="cinfo__title">South Padel</h3>
+      <div class="cinfo__map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.842155853653!2d106.77737587499098!3d-6.284469893704451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1279dbb8559%3A0x1ed489fd5a315f39!2ssouth%20padel!5e0!3m2!1sen!2sid!4v1757841127622!5m2!1sen!2sid" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+
+      <dl class="cinfo__list">
+        <div><dt>Phone</dt><dd><a href="tel:+62123456789">+62 812-3456-789</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/628123456789" target="_blank" rel="noopener">Chat on WhatsApp</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:hello@southpadel.id">hello@southpadel.id</a></dd></div>
+      </dl>
+
+      <h4 class="cinfo__sub">Opening Hours</h4>
+      <ul class="cinfo__hours">
+        <li><span>Mon – Sun</span><b>06:00 – 24:00</b></li>
+      </ul>
+
+      <div class="cinfo__cta">
+        <a class="btn is-light" href="https://wa.me/628123456789?text=Hi%20South%20Padel%2C%20I%20want%20to%20book%20a%20court." target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="btn is-outline" href="tel:+62123456789">Call</a>
+      </div>
+    </aside>
+
+    <!-- Form -->
+    <div class="cform">
+      <form id="contactForm" novalidate>
+        <div class="frow">
+          <label for="fname">Full Name *</label>
+          <input id="fname" name="name" type="text" required autocomplete="name" />
+        </div>
+
+        <div class="frow">
+          <label for="femail">Email *</label>
+          <input id="femail" name="email" type="email" required autocomplete="email" />
+        </div>
+
+        <div class="frow">
+          <label for="fphone">WhatsApp / Phone</label>
+          <input id="fphone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+62…" />
+        </div>
+
+        <div class="frow">
+          <label for="fmsg">Message</label>
+          <textarea id="fmsg" name="message" rows="5" placeholder="Tell us about your booking, event, or coaching request…"></textarea>
+        </div>
+
+        <div class="frow frow--agree">
+          <label class="check">
+            <input type="checkbox" id="fagree" required>
+            <span>I agree to be contacted regarding my inquiry.</span>
+          </label>
+        </div>
+
+        <div class="frow frow--actions">
+          <button type="submit" class="btn is-solid">Send via Email</button>
+          <button type="button" id="sendWA" class="btn is-outline">Send via WhatsApp</button>
+        </div>
+
+        <p id="fstatus" class="fstatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq">
+  <div class="faq__head">
+    <p class="faq__eyebrow">FAQ</p>
+    <h2 class="faq__title">Frequently Asked Questions</h2>
+    <p class="faq__lead">Find quick answers about booking, membership, and coaching.</p>
+  </div>
+
+  <div class="faq__list">
+    <!-- Item 1 -->
+    <article class="faq__item">
+      <button class="faq__q" aria-expanded="false">
+        How do I book a court?
+      </button>
+      <div class="faq__a">
+        <p>You can book directly on our website via the “Court Available” section or contact us on WhatsApp. Walk-ins are welcome if slots are free.</p>
+      </div>
+    </article>
+
+    <!-- Item 2 -->
+    <article class="faq__item">
+      <button class="faq__q" aria-expanded="false">
+        What are the opening hours?
+      </button>
+      <div class="faq__a">
+        <p>We’re open every day from <b>06:00 to 24:00</b>.</p>
+      </div>
+    </article>
+
+    <!-- Item 3 -->
+    <article class="faq__item">
+      <button class="faq__q" aria-expanded="false">
+        Do you offer coaching for beginners?
+      </button>
+      <div class="faq__a">
+        <p>Yes! We have Beginner Group programs and private coaching. Our certified coaches will help you start from the basics.</p>
+      </div>
+    </article>
+
+    <!-- Item 4 -->
+    <article class="faq__item">
+      <button class="faq__q" aria-expanded="false">
+        Are memberships available?
+      </button>
+      <div class="faq__a">
+        <p>Yes, we offer several membership tiers with benefits like café discounts and reduced court rates. Check the Pricing section for details.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <!-- Brand -->
+    <div class="footer__brand">
+      <h3 class="footer__logo">South Padel</h3>
+      <p class="footer__tagline">Premium padel courts & café experience.</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <h4 class="footer__head">Navigation</h4>
+      <ul>
+        <li><a href="#courts">Courts</a></li>
+        <li><a href="#facility">Facilities</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact -->
+    <div class="footer__contact">
+      <h4 class="footer__head">Contact</h4>
+      <ul>
+        <li><a href="https://maps.app.goo.gl/KeNxaT2kYMYhdYrK8" target="_blank">Jl. Contoh Raya No. 123, Jakarta</a></li>
+        <li><a href="tel:+62123456789">+62 812-3456-789</a></li>
+        <li><a href="mailto:hello@southpadel.id">hello@southpadel.id</a></li>
+      </ul>
+    </div>
+
+    <!-- Hours & Social -->
+    <div class="footer__extra">
+      <h4 class="footer__head">Opening Hours</h4>
+      <p>Mon – Sun: 06:00 – 24:00</p>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+        <a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__copy">
+    <p>© 2025 South Padel. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
 
 
   
@@ -404,66 +921,236 @@
   </script>
   
   <script>
-    // Parallax: konten bergerak halus, video tetap fixed di belakang
-    (function(){
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) return;
+  // Lazy-load video + parallax on-demand
+  (function(){
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const hero   = document.querySelector('.hero');
+    const video  = document.getElementById('heroVideo');
+    const content= document.getElementById('heroContent');
+    if (!hero || !video || !content) return;
 
-      const hero    = document.querySelector('.hero');
-      const content = document.getElementById('heroContent');
-      if (!hero || !content) return;
+    // 1) Lazy inject video sources ketika hero masuk viewport
+    const loadVideo = () => {
+      const sources = video.querySelectorAll('source[data-src]');
+      sources.forEach(s => { s.src = s.dataset.src; s.removeAttribute('data-src'); });
+      // panggil load() lalu play kalau boleh
+      video.load();
+      // Autoplay hanya ketika user sudah melihat hero -> lebih hemat
+      const tryPlay = () => video.play().catch(()=>{ /* beberapa browser butuh gesture */ });
+      // kecilkan risiko stutter: tunda sejenak
+      requestAnimationFrame(tryPlay);
+    };
 
-      const STRENGTH = 0.12; // 0.06–0.18 (lebih besar = lebih terasa)
+    // 2) Parallax: aktif hanya saat hero terlihat
+    let running = false;
+    const STRENGTH = 0.12;
+    const update = () => {
+      const r = hero.getBoundingClientRect();
+      const inview = r.bottom > 0 && r.top < window.innerHeight;
+      if (!inview) return; // jangan update saat tidak terlihat
+      const y = Math.min(Math.max(-r.top, 0), r.height);
+      content.style.transform = `translate3d(0, ${-y*STRENGTH}px, 0)`;
+      content.style.opacity = String(1 - (y / (r.height || 1)) * 0.12);
+    };
+    const onScroll = () => {
+      if (running) return;
+      running = true;
+      requestAnimationFrame(() => { update(); running = false; });
+    };
 
-      function update(){
-        const r = hero.getBoundingClientRect();
-        const y = Math.min(Math.max(-r.top, 0), r.height); // 0..height saat hero terlihat
-
-        // Parallax move
-        content.style.transform = `translateY(${-y * STRENGTH}px)`;
-
-        // (opsional) sedikit fade supaya elegan
-        const prog = y / (r.height || 1);
-        content.style.opacity = String(1 - prog * 0.12);
-      }
-
-      let ticking = false;
-      function onScroll(){
-        if (!ticking){
-          requestAnimationFrame(() => { update(); ticking = false; });
-          ticking = true;
-        }
-      }
-
-      window.addEventListener('scroll', onScroll, { passive:true });
-      window.addEventListener('resize', onScroll, { passive:true });
-      update(); // posisi awal
-    })();
-  </script>
-
-  <script>
-    (function(){
-      const cards = document.querySelectorAll('.court');
-      cards.forEach(card=>{
-        const cta   = card.querySelector('.court__cta');
-        const slots = card.querySelectorAll('.slot.is-available');
-
-        slots.forEach(btn=>{
-          btn.addEventListener('click', ()=>{
-            // reset pilihan di card ini
-            slots.forEach(b=>{ b.classList.remove('is-selected'); b.removeAttribute('aria-selected'); });
-            // pilih yang diklik
-            btn.classList.add('is-selected'); btn.setAttribute('aria-selected','true');
-            // aktifkan CTA
-            cta.removeAttribute('aria-disabled');
-            cta.classList.remove('is-disabled');
-            cta.textContent = `Book ${btn.dataset.time}`;
-          });
+    if (!reduce) {
+      // Observe hero masuk/keluar viewport
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            // mulai: load video (sekali saja) + pasang listener scroll
+            if (!video.dataset._loaded) { loadVideo(); video.dataset._loaded = '1'; }
+            window.addEventListener('scroll', onScroll, {passive:true});
+            window.addEventListener('resize', onScroll, {passive:true});
+            onScroll();
+          } else {
+            // berhenti: pause & lepas listener supaya hemat
+            video.pause();
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', onScroll);
+          }
         });
-      });
-    })();
-  </script>
+      }, { rootMargin: '200px 0px 0px 0px', threshold: 0.01 });
 
+      io.observe(hero);
+    } else {
+      // reduced motion: tidak parallax, bisa tetap lazy-load posternya saja
+      // (Kalau masih ingin video, panggil loadVideo();)
+    }
+  })();
+</script>
+
+<script>
+(function(){
+  const track = document.getElementById('gtrack');
+  const bar   = document.querySelector('.gprogress .gbar');
+  if(!track || !bar) return;
+
+  function setProgress(){
+    const max = track.scrollWidth - track.clientWidth;
+    const p = max <= 0 ? 1 : (track.scrollLeft / max);
+    bar.style.width = (p * 100) + '%';
+  }
+  track.addEventListener('scroll', setProgress, {passive:true});
+  window.addEventListener('resize', setProgress);
+  setProgress(); // init
+
+  // kalau kamu pakai tombol prev/next, panggil setProgress() setelah scrollBy:
+  const prev = document.querySelector('.gbtn--prev');
+  const next = document.querySelector('.gbtn--next');
+  const getSlideW = () => (track.querySelector('.gslide')?.getBoundingClientRect().width || 400) + 18;
+  const go = dir => { track.scrollBy({left: dir*getSlideW(), behavior:'smooth'}); setTimeout(setProgress, 450); };
+  prev?.addEventListener('click', () => go(-1));
+  next?.addEventListener('click', () => go(1));
+
+  // opsional: auto-scroll tetap jalan
+  const auto = setInterval(() => {
+    if(document.hidden) return;
+    const max = track.scrollWidth - track.clientWidth - 1;
+    if (track.scrollLeft >= max) { track.scrollTo({left:0, behavior:'smooth'}); }
+    else { go(1); }
+  }, 2500);
+})();
+</script>
+
+<script>
+(function(){
+  const track = document.getElementById('ttrack');
+  if(!track) return;
+
+  const prev = document.querySelector('.tbtn--prev');
+  const next = document.querySelector('.tbtn--next');
+  const bar  = document.querySelector('.tprogress .tbar');
+
+  const slideW = () => (track.querySelector('.tcard')?.getBoundingClientRect().width || 400) + 18;
+  const go = dir => track.scrollBy({ left: dir*slideW(), behavior: 'smooth' });
+
+  const update = () => {
+    const max = track.scrollWidth - track.clientWidth;
+    const p = max <= 0 ? 1 : track.scrollLeft / max;
+    if (bar) bar.style.width = (p * 100) + '%';
+    if (prev && next){
+      prev.disabled = track.scrollLeft <= 0;
+      next.disabled = track.scrollLeft >= max - 1;
+    }
+  };
+
+  prev?.addEventListener('click', ()=>{ go(-1); setTimeout(update, 450); });
+  next?.addEventListener('click', ()=>{ go(1);  setTimeout(update, 450); });
+  track.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  update();
+
+  // auto-scroll (set interval sesuai selera)
+  const auto = setInterval(()=>{
+    if (document.hidden) return;
+    const max = track.scrollWidth - track.clientWidth - 1;
+    if (track.scrollLeft >= max) track.scrollTo({left:0, behavior:'smooth'});
+    else go(1);
+  }, 3000);
+})();
+</script>
+
+<script>
+(() => {
+  const track = document.getElementById('coachTrack');
+  if(!track) return;
+  const prev = document.querySelector('.cbtn.is-prev');
+  const next = document.querySelector('.cbtn.is-next');
+
+  const slideW = () => (track.querySelector('.cslide')?.getBoundingClientRect().width || 400) + 24;
+  const go = dir => track.scrollBy({ left: dir * slideW(), behavior: 'smooth' });
+
+  prev.addEventListener('click', () => go(-1));
+  next.addEventListener('click', () => go(1));
+
+  // Auto-scroll (boleh hapus kalau tak perlu)
+  setInterval(() => {
+    if (document.hidden) return;
+    const max = track.scrollWidth - track.clientWidth - 1;
+    if (track.scrollLeft >= max) track.scrollTo({ left: 0, behavior: 'smooth' });
+    else go(1);
+  }, 2800);
+})();
+</script>
+
+<script>
+/* ===== CONTACT FORM: mailto + WhatsApp (no backend) ===== */
+(() => {
+  const form = document.getElementById('contactForm');
+  const waBtn = document.getElementById('sendWA');
+  const status = document.getElementById('fstatus');
+
+  function collect() {
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const date = document.getElementById('fdate').value;
+    const time = document.getElementById('ftime').value;
+    const msg  = document.getElementById('fmsg').value.trim();
+    return {name, email, phone, date, time, msg};
+  }
+
+  function buildText(d) {
+    return `New inquiry from South Padel site:
+Name: ${d.name}
+Email: ${d.email}
+Phone: ${d.phone || '-'}
+Preferred: ${d.date || '-'} ${d.time || ''}
+Message:
+${d.msg || '-'}`;
+  }
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!document.getElementById('fagree').checked) {
+      status.textContent = 'Please agree to be contacted.';
+      return;
+    }
+    const d = collect();
+    if (!d.name || !d.email) {
+      status.textContent = 'Name and email are required.';
+      return;
+    }
+    const subject = encodeURIComponent('South Padel Inquiry');
+    const body = encodeURIComponent(buildText(d));
+    window.location.href = `mailto:hello@southpadel.id?subject=${subject}&body=${body}`;
+    status.textContent = 'Opening your email app…';
+  });
+
+  waBtn?.addEventListener('click', () => {
+    const d = collect();
+    const text = encodeURIComponent(buildText(d));
+    const phone = '628123456789'; // ganti nomor WA
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    status.textContent = 'Opening WhatsApp…';
+  });
+})();
+</script>
+
+<script>
+document.querySelectorAll('.faq__q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item = btn.parentElement;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    // tutup semua
+    document.querySelectorAll('.faq__item').forEach(i=>{
+      i.classList.remove('active');
+      i.querySelector('.faq__q').setAttribute('aria-expanded','false');
+    });
+    // toggle yang diklik
+    if(!expanded){
+      item.classList.add('active');
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
+});
+</script>
 
 
 </body>
