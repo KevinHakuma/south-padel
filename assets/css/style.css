@@ -1120,14 +1120,14 @@ html, body {
 /* Info panel */
 .cinfo{
   background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.18);
+  border: 1px solid rgba(0,0,0,.08);
   border-radius:18px; padding:22px;
   box-shadow: 0 14px 28px rgba(0,0,0,.18);
   backdrop-filter: blur(2px);
 }
-.cinfo__title{font:700 1.25rem 'CormorantGaramond',serif;margin:0 0 6px}
+.cinfo__title{font:700 1.25rem 'CormorantGaramond',serif;margin:0 0 8px}
 .cinfo__addr{margin:0 0 12px}
-.cinfo__map{color:var(--beige); text-decoration:underline}
+.cinfo__map{color:var(--brand); text-decoration:underline}  /* lebih kontras di panel terang */
 .cinfo__list{margin:10px 0 14px}
 .cinfo__list > div{display:flex;gap:10px;margin:6px 0}
 .cinfo__list dt{min-width:90px;opacity:.85}
@@ -1138,6 +1138,18 @@ html, body {
 .cinfo__hours{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:6px}
 .cinfo__hours li{display:flex;justify-content:space-between;gap:10px;opacity:.95}
 .cinfo__cta{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Map embed (opsional) */
+.map-embed{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+  margin: 8px 0 14px;
+}
+.map-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0 }
 
 /* Form */
 .cform{
@@ -1171,14 +1183,72 @@ input:focus, textarea:focus{border-color:#9fb7ad; box-shadow:0 0 0 3px rgba(159,
 }
 .btn.is-solid{background:var(--brand);color:var(--beige)}
 .btn.is-solid:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(0,0,0,.12)}
-.btn.is-outline{background:transparent;color:var(--beige);border-color:rgba(255,255,255,.6)}
-.btn.is-outline:hover{background:rgba(255,255,255,.1)}
+.btn.is-outline{background:transparent;color:var(--brand);border-color:rgba(0,0,0,.25)}
+.btn.is-outline:hover{background:rgba(0,0,0,.05)}
 
 .btn.is-light{background:#fff;color:var(--brand)}
 .btn.is-light:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(0,0,0,.16)}
 
 .fstatus{margin-top:6px;opacity:.9}
 
+/* ===== MOBILE RESPONSIVE POLISH ===== */
+@media (max-width: 768px){
+  .contact{ padding: 40px 5vw; }
+  .contact__head{ margin-bottom: 22px; }
+  .contact__lead{ font-size:.95rem; }
+
+  .contact__grid{
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .cinfo, .cform{
+    padding:16px;
+    border-radius:14px;
+    box-shadow:0 10px 22px rgba(0,0,0,.16);
+  }
+
+  /* Info list jadi grid agar rapi & wrap link panjang */
+  .cinfo__list > div{
+    display:grid;
+    grid-template-columns: 110px 1fr;
+    gap: 6px 10px;
+    align-items:start;
+  }
+  .cinfo__list a{ word-break: break-word; overflow-wrap: anywhere; }
+
+  /* Jam buka: dua kolom rapat */
+  .cinfo__hours li{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+
+  /* CTA full width biar gampang di-tap */
+  .cinfo__cta{ gap:8px }
+  .cinfo__cta .btn{
+    width:100%;
+    min-height:44px;
+  }
+
+  /* Form controls nyaman di mobile (hindari zoom iOS) */
+  input, textarea{
+    font-size:16px;
+    padding:.7rem .9rem;
+  }
+  .frow--split{ grid-template-columns:1fr; gap:10px; }
+  .frow--actions{ flex-direction:column; }
+  .frow--actions .btn{
+    width:100%;
+    min-height:44px;
+  }
+}
+
+/* extra-small phones */
+@media (max-width: 380px){
+  .contact__title{ font-size: clamp(24px, 8vw, 32px); }
+  .cinfo__list > div{ grid-template-columns: 90px 1fr; }
+}
 
 /* ===== FAQ ===== */
 .faq{
