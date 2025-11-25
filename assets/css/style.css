@@ -8,8 +8,8 @@
 
 /* ==== ROOT VARS ==== */
 :root{
-  --brand: #0f3d2e;
-  --beige: #f5f5dc;
+  --brand: #273f29;
+  --beige: #d8e5cb;
 
   /* Hero essentials */
   --hero-h: 100vh;
@@ -140,30 +140,40 @@ html, body {
   .cta{ width:100%; justify-content:center; }
 }
 
-/* ==== HERO (Video fixed + Parallax content) ==== */
+/* ==== HERO (IMAGE BACKGROUND + PARALLAX CONTENT) ==== */
 .hero{
   position: relative;
   height: var(--hero-h);
   min-height: 72svh;
-  overflow: clip;
+  overflow: hidden;
   isolation: isolate;
   z-index: 0;
 }
 
-/* Video stays fixed and fully covers the viewport */
-.hero video{
-  position: fixed;
-  inset: 0;                 /* top/right/bottom/left: 0 */
-  width: 100%;              /* isi lebar viewport */
-  height: 100%;             /* isi tinggi viewport */
-  object-fit: cover;        /* isi penuh, jaga rasio, crop secukupnya */
-  z-index: -2;
-  filter: saturate(1.05) contrast(1.09);
-  transform: translateZ(0);
-  pointer-events: none;
+/* versi khusus kalau pakai image */
+.hero--image{
+  position: relative;
 }
 
-/* (opsional) overlay kamu yang pakai ::before tetap oke */
+/* background image di-wrap di .hero-bg */
+.hero--image .hero-bg{
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.hero--image .hero-bg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(2);          /* default */
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+
+
+/* overlay gelap di atas foto */
 .hero::before{
   content: "";
   position: absolute;
@@ -173,16 +183,16 @@ html, body {
   pointer-events: none;
 }
 
-/* Parallax container */
+/* konten di tengah */
 .hero-inner{
   position: relative;
   height: 100%;
-  display: grid; place-items: center;
+  display: grid;
+  place-items: center;
   padding: min(6vw, 48px);
   perspective: 1000px;
 }
 
-/* Parallax target */
 .hero-content{
   text-align: center;
   max-width: min(92vw, 980px);
@@ -190,25 +200,26 @@ html, body {
   transform-style: preserve-3d;
 }
 
-/* Texts & logo */
 .hero-tag{
   font-family: 'CormorantGaramond', serif;
   letter-spacing: .35em;
   text-indent: .35em;
   font-size: clamp(.76rem, 3.8vw, 1.95rem);
   font-weight: 600;
-  /* opacity: .9; */
   margin: 0 0 .75rem;
   text-transform: uppercase;
 }
+
 .hero-title{
   width: min(72vw, 560px);
   height: auto;
   display: block;
   margin-inline: auto;
   filter: drop-shadow(0 8px 22px rgba(0,0,0,.45));
-  user-select: none; pointer-events: none;
+  user-select: none;
+  pointer-events: none;
 }
+
 .hero-sub{
   font-family: 'CormorantGaramond', serif;
   margin: .5rem 0 1.5rem;
@@ -235,7 +246,8 @@ html, body {
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,.08),
     0 10px 24px rgba(0,0,0,.25);
-  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease,
+              background .2s ease, border-color .2s ease;
 }
 .btn-hero:hover{
   transform: translateY(-2px);
@@ -250,7 +262,8 @@ html, body {
 /* Scroll hint */
 .scroll-hint{
   position: absolute;
-  left: 50%; bottom: 18px;
+  left: 50%;
+  bottom: 18px;
   translate: -50% 0;
   font-size: .8rem;
   opacity: .7;
@@ -464,6 +477,7 @@ html, body {
 
 .courts__grid {
   display: flex;
+  justify-content: center;
   gap: 20px;                /* jarak antar kartu */
   overflow-x: auto;         /* scroll horizontal */
   scroll-snap-type: x mandatory; /* biar snap antar kartu */
@@ -479,7 +493,7 @@ html, body {
 
 /* Card */
 .court {
-  flex: 0 0 350px;
+  flex: 0 0 400px;
   scroll-snap-align: start; 
   background:#fff; 
   color:#0f3d2e; 
@@ -561,12 +575,13 @@ html, body {
 
 
 
-/* Respect reduced motion */
+/* Respect reduced motion: matikan efek parallax saja */
 @media (prefers-reduced-motion: reduce){
-  .hero video{ position: absolute; } /* fall back */
-  .hero::before{ position: absolute; }
-  .hero-content{ transform: none !important; }
+  .hero-content{
+    transform: none !important;
+  }
 }
+
 
 /* ===== FACILITY ===== */
 .facility {
@@ -749,8 +764,8 @@ html, body {
 
 /* ===== GALLERY (Carousel) – REVISED ===== */
 .gallery{
-  background: var(--beige);
-  color: var(--brand);
+  background: var(--brand);
+  color: var(--beige);
   padding: clamp(56px,8vw,100px) 5vw;
   scroll-margin-top: 120px;
   position: relative;           /* wajib */
@@ -761,13 +776,13 @@ html, body {
 .gallery__head{max-width:800px;margin:0 auto 40px;text-align:center}
 .gallery__eyebrow{
   font-family:'CormorantGaramond',serif; letter-spacing:.35em; text-indent:.35em;
-  font-weight:600; opacity:.9; margin:0 0 .4rem; color:var(--brand);
+  font-weight:600; opacity:.9; margin:0 0 .4rem; color:var(--beige);
 }
 .gallery__title{
   font-family:'CormorantGaramond',serif; font-weight:600; line-height:1.1;
-  font-size:clamp(28px,4vw,46px); margin:0 0 .5rem; color:var(--brand);
+  font-size:clamp(28px,4vw,46px); margin:0 0 .5rem; color:var(--beige);
 }
-.gallery__lead{max-width:600px;margin:0 auto;color:var(--brand);opacity:.9}
+.gallery__lead{max-width:600px;margin:0 auto;color:var(--beige);opacity:.9}
 
 /* wrapper + track */
 .gwrap{
@@ -799,7 +814,7 @@ html, body {
 .gbar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--brand), #1e4d3a);
+  background: linear-gradient(90deg, var(--beige), #cecece);
   border-radius: 999px;
   transition: width .25s ease;
 }
@@ -857,8 +872,8 @@ html, body {
 
 /* ===== TESTIMONY (Carousel) ===== */
 .testimony{
-  background: var(--brand);
-  color: var(--beige);
+  background: var(--beige);
+  color: var(--brand);
   padding: clamp(56px,8vw,100px) 5vw;
   scroll-margin-top:120px;
   position: relative;   /* aman dari layer lain */
@@ -869,13 +884,13 @@ html, body {
 .testimony__head{max-width:800px;margin:0 auto 40px;text-align:center}
 .testimony__eyebrow{
   font-family:'CormorantGaramond',serif; letter-spacing:.35em; text-indent:.35em;
-  font-weight:600; opacity:.95; margin:0 0 .4rem; color:var(--beige);
+  font-weight:600; opacity:.95; margin:0 0 .4rem; color:var(--brand);
 }
 .testimony__title{
   font-family:'CormorantGaramond',serif; font-weight:600; line-height:1.1;
-  font-size:clamp(28px,4vw,46px); margin:0 0 .5rem; color:var(--beige);
+  font-size:clamp(28px,4vw,46px); margin:0 0 .5rem; color:var(--brand);
 }
-.testimony__lead{max-width:600px;margin:0 auto;color:var(--beige);opacity:.95}
+.testimony__lead{max-width:600px;margin:0 auto;color:var(--brand);opacity:.95}
 
 /* wrapper */
 .twrap{position:relative;max-width:1200px;margin:0 auto}
@@ -891,7 +906,7 @@ html, body {
 /* card */
 .tcard{
   scroll-snap-align:center; flex:0 0 85%;
-  background:#fff; color:#0f3d2e; border-radius:18px;
+  background:#fff; color:var(--brand); border-radius:18px;
   box-shadow:0 12px 28px rgba(0,0,0,.18);
   padding:22px 22px 18px; min-height:220px;
   display:flex; flex-direction:column; justify-content:space-between;
@@ -910,7 +925,7 @@ html, body {
   position:absolute;top:50%;transform:translateY(-50%);
   width:42px;height:42px;border-radius:999px;border:0;
   display:grid;place-items:center;cursor:pointer;
-  background: var(--beige); color: var(--brand);
+  background: var(--brand); color: var(--beige);
   box-shadow:0 6px 16px rgba(0,0,0,.12);
   transition:transform .15s ease, box-shadow .15s ease;
   z-index: 10;
@@ -924,12 +939,12 @@ html, body {
 
 /* progress */
 .tprogress{
-  height:6px;background:rgba(255,255,255,.25);
+  height:6px;background:#aac0b8b6;
   border-radius:999px;margin:12px 14px 0;overflow:hidden;
 }
 .tbar{
   height:100%;width:0%;
-  background: var(--beige);
+  background: var(--brand);
   border-radius:999px;transition:width .25s ease;
 }
 
@@ -939,11 +954,10 @@ html, body {
   .tbtn{transition:none}
 }
 
-
 /* ===== COACHING v1 ===== */
 .coachv1{
-  background: var(--beige);
-  color: var(--brand);
+  background: var(--brand);
+  color: var(--beige);
   padding: clamp(56px,8vw,110px) 5vw;
   scroll-margin-top:120px;
   position: relative; z-index:2; isolation:isolate;
@@ -1035,8 +1049,8 @@ html, body {
 
 /* ===== BLOG / NEWS ===== */
 .blog{
-  background: var(--brand);
-  color: var(--beige);
+  background: var(--beige);
+  color: var(--brand);
   padding: clamp(56px,8vw,100px) 5vw;
   scroll-margin-top: 120px;
   position: relative; z-index: 2; isolation: isolate;
@@ -1048,16 +1062,16 @@ html, body {
   font-family:'CormorantGaramond',serif;
   letter-spacing:.35em; text-indent:.35em;
   font-weight:600; opacity:.9; margin:0 0 .4rem;
-  color: var(--beige);
+  color: var(--brand);
 }
 .blog__title{
   font-family:'CormorantGaramond',serif;
   font-weight:600; line-height:1.1;
   font-size:clamp(28px,4vw,46px); margin:0 0 .5rem;
-  color: var(--beige);
+  color: var(--brand);
 }
 .blog__lead{
-  max-width:620px; margin:0 auto; color:var(--beige); opacity:.85;
+  max-width:620px; margin:0 auto; color:var(--brand); opacity:.85;
 }
 
 .blog__grid{
@@ -1085,17 +1099,17 @@ html, body {
 .post__excerpt{ font-size:.95rem; line-height:1.5; opacity:.85; }
 .post__cta{
   margin-top:auto; align-self:flex-start;
-  color: var(--beige); font-weight:700; text-decoration:none;
+  color: var(--brand); font-weight:700; text-decoration:none;
   border-bottom:2px solid transparent;
   transition: border-color .2s ease;
 }
-.post__cta:hover{ border-color: var(--beige); }
+.post__cta:hover{ border-color: var(--brand); }
 
 
 /* ===== CONTACT ===== */
 .contact{
-  background: var(--beige);
-  color: var(--brand);
+  background: var(--brand);
+  color: var(--beige);
   padding: clamp(56px,8vw,110px) 5vw;
   scroll-margin-top: 120px;
   position: relative; z-index: 2; isolation: isolate;
@@ -1127,12 +1141,12 @@ html, body {
 }
 .cinfo__title{font:700 1.25rem 'CormorantGaramond',serif;margin:0 0 8px}
 .cinfo__addr{margin:0 0 12px}
-.cinfo__map{color:var(--brand); text-decoration:underline}  /* lebih kontras di panel terang */
+.cinfo__map{color:var(--beige); text-decoration:underline}  /* lebih kontras di panel terang */
 .cinfo__list{margin:10px 0 14px}
 .cinfo__list > div{display:flex;gap:10px;margin:6px 0}
 .cinfo__list dt{min-width:90px;opacity:.85}
 .cinfo__list dd{margin:0}
-.cinfo a{color:var(--brand)}
+.cinfo a{color:var(--beige)}
 
 .cinfo__sub{margin:14px 0 6px;font-weight:700}
 .cinfo__hours{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:6px}
@@ -1183,7 +1197,7 @@ input:focus, textarea:focus{border-color:#9fb7ad; box-shadow:0 0 0 3px rgba(159,
 }
 .btn.is-solid{background:var(--brand);color:var(--beige)}
 .btn.is-solid:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(0,0,0,.12)}
-.btn.is-outline{background:transparent;color:var(--brand);border-color:rgba(0,0,0,.25)}
+.btn.is-outline{background:var(--beige);color:var(--brand);border-color:rgba(0,0,0,.25)}
 .btn.is-outline:hover{background:rgba(0,0,0,.05)}
 
 .btn.is-light{background:#fff;color:var(--brand)}
@@ -1252,8 +1266,8 @@ input:focus, textarea:focus{border-color:#9fb7ad; box-shadow:0 0 0 3px rgba(159,
 
 /* ===== FAQ ===== */
 .faq{
-  background: var(--brand);
-  color: var(--beige);
+  background: var(--beige);
+  color: var(--brand);
   padding: clamp(56px,8vw,100px) 5vw;
   scroll-margin-top:120px;
   position: relative; z-index:2; isolation:isolate;
@@ -1275,7 +1289,7 @@ input:focus, textarea:focus{border-color:#9fb7ad; box-shadow:0 0 0 3px rgba(159,
 
 .faq__list{max-width:900px;margin:0 auto;display:grid;gap:16px}
 .faq__item{
-  background:rgba(255,255,255,.08);
+  background:rgba(101, 101, 101, 0.216);
   border:1px solid rgba(255,255,255,.15);
   border-radius:12px;
   overflow:hidden;
@@ -1298,13 +1312,13 @@ input:focus, textarea:focus{border-color:#9fb7ad; box-shadow:0 0 0 3px rgba(159,
 
 /* ===== FOOTER ===== */
 .footer{
-  background: var(--beige);
-  color: var(--brand);
+  background: var(--brand);
+  color: var(--beige);
   padding: clamp(40px,6vw,70px) 5vw 20px;
   position: relative; z-index:2; isolation:isolate;
 }
 .footer__inner{
-  color:  var(--brand);
+  color:  var(--beige);
   max-width:1200px;
   margin:0 auto;
   display:grid;
@@ -1334,11 +1348,11 @@ input:focus, textarea:focus{border-color:#9fb7ad; box-shadow:0 0 0 3px rgba(159,
   padding:0;
   display:grid;
   gap:6px;
-  color: var(--brand);
+  color: var(--beige);
 }
 .footer__nav a,
 .footer__contact a{
-  color:var(--brand);
+  color:var(--beige);
   text-decoration:none;
   opacity:.9;
   transition:opacity .2s;
@@ -1355,7 +1369,7 @@ input:focus, textarea:focus{border-color:#9fb7ad; box-shadow:0 0 0 3px rgba(159,
   gap:14px;
   font-size:1.5rem;
 }
-.footer__social a{color:var(--beige);opacity:.85;transition:opacity .2s}
+.footer__social a{color:var(--brand);opacity:.85;transition:opacity .2s}
 .footer__social a:hover{opacity:1}
 
 /* Copy bar */

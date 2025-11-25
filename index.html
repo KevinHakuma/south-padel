@@ -20,7 +20,6 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#courts">Courts</a></li>
       <li><a href="#facility">Facilities</a></li>
-      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#coaching">Coaching</a></li>
       <li><a href="#blog">Blog</a></li>
@@ -35,19 +34,16 @@
 </div>
 
   <!-- HERO SECTION -->
-  <section class="hero">
-    <!-- Video Background (LAZY) -->
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="assets/video/hero.mp4" type="video/mp4">
-      <source src="assets/video/hero.webm" type="video/webm">
-      Browser kamu tidak mendukung video background.
-    </video>
+  <section class="hero hero--image">
+    <div class="hero-bg">
+      <img src="assets/img/hero.jpg" alt="South Padel Indoor Court" loading="eager">
+    </div>
 
     <div class="hero-inner">
       <div class="hero-content" id="heroContent">
         <p class="hero-tag">WELCOME TO</p>
         <img src="assets/img/herologo.png" alt="South Padel" class="hero-title" loading="lazy">
-        <p class="hero-sub">COURT &amp; CAFE</p>
+        <p class="hero-sub">COURT & CAFE</p>
         <a href="#booking" class="btn-hero">Book Now</a>
       </div>
       <div class="scroll-hint">SCROLL</div>
@@ -61,7 +57,7 @@
       <div class="about__media">
         <!-- Ganti src dengan fotomu -->
         <div class="about__photo-wrap">
-          <img src="assets/img/about.webp" alt="South Padel — court & cafe" class="about__photo" loading="lazy">
+          <img src="assets/img/about.jpg" alt="South Padel — court & cafe" class="about__photo" loading="lazy">
         </div>
       </div>
 
@@ -77,14 +73,14 @@
         </p>
 
         <ul class="about__list">
-          <li>6 premium indoor courts (pro-standard)</li>
+          <li>3 premium indoor courts (pro-standard)</li>
           <li>Café &amp; lounge with Wi-Fi and a signature menu</li>
           <li>Weekly coaching &amp; community events</li>
         </ul>
 
         <div class="about__stats">
           <div class="stat">
-            <span class="num">6</span>
+            <span class="num">3</span>
             <span class="label">Indoor Courts</span>
           </div>
           <div class="stat">
@@ -113,7 +109,7 @@
     <div class="courts__grid">
       <!-- A -->
       <article class="court">
-        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court A" loading="lazy"></div>
+        <div class="court__media"><img src="assets/img/court.jpg" alt="Indoor Court A" loading="lazy"></div>
         <div class="court__body">
           <div class="court__row">
             <h3 class="court__name">Indoor Court A</h3>
@@ -149,7 +145,7 @@
 
       <!-- B -->
       <article class="court">
-        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court B"></div>
+        <div class="court__media"><img src="assets/img/court.jpg" alt="Indoor Court B"></div>
         <div class="court__body">
           <div class="court__row">
             <h3 class="court__name">Indoor Court B</h3>
@@ -185,7 +181,7 @@
 
       <!-- C -->
       <article class="court">
-        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court C"></div>
+        <div class="court__media"><img src="assets/img/court.jpg" alt="Indoor Court C"></div>
         <div class="court__body">
           <div class="court__row">
             <h3 class="court__name">Indoor Court C</h3>
@@ -216,114 +212,6 @@
             <button class="slot is-booked" disabled>24:00</button>
           </div>
           <a href="#booking" class="about__cta court__cta is-disabled" aria-disabled="true">Join Waitlist</a>
-        </div>
-      </article>
-
-      <!-- D -->
-      <article class="court">
-        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court D"></div>
-        <div class="court__body">
-          <div class="court__row">
-            <h3 class="court__name">Indoor Court D</h3>
-            <span class="badge is-available">Available</span>
-          </div>
-          <ul class="court__meta">
-            <li>Surface: Acrylic</li><li>Format: Doubles (2v2)</li>
-          </ul>
-          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court D">
-            <button class="slot is-available" data-time="06:00">06:00</button>
-            <button class="slot is-booked" disabled>07:00</button>
-            <button class="slot is-available" data-time="08:00">08:00</button>
-            <button class="slot is-booked" disabled>09:00</button>
-            <button class="slot is-available" data-time="10:00">10:00</button>
-            <button class="slot is-available" data-time="11:00">11:00</button>
-            <button class="slot is-available" data-time="12:00">12:00</button>
-            <button class="slot is-available" data-time="13:00">13:00</button>
-            <button class="slot is-available" data-time="14:00">14:00</button>
-            <button class="slot is-available" data-time="15:00">15:00</button>
-            <button class="slot is-available" data-time="16:00">16:00</button>
-            <button class="slot is-available" data-time="17:00">17:00</button>
-            <button class="slot is-available" data-time="18:00">18:00</button>
-            <button class="slot is-available" data-time="19:00">19:00</button>
-            <button class="slot is-available" data-time="20:00">20:00</button>
-            <button class="slot is-available" data-time="21:00">21:00</button>
-            <button class="slot is-available" data-time="22:00">22:00</button>
-            <button class="slot is-available" data-time="23:00">23:00</button>
-            <button class="slot is-available" data-time="24:00">24:00</button>
-          </div>
-          <a href="#booking" class="about__cta court__cta">Book a Court</a>
-        </div>
-      </article>
-
-      <!-- E -->
-      <article class="court">
-        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court E"></div>
-        <div class="court__body">
-          <div class="court__row">
-            <h3 class="court__name">Indoor Court E</h3>
-            <span class="badge is-limited">Limited</span>
-          </div>
-          <ul class="court__meta">
-            <li>Surface: Synthetic Turf</li><li>Format: Singles & Doubles</li>
-          </ul>
-          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court E">
-            <button class="slot is-available" data-time="06:00">06:00</button>
-            <button class="slot is-available" data-time="07:00">07:00</button>
-            <button class="slot is-available" data-time="08:00">08:00</button>
-            <button class="slot is-available" data-time="09:00">09:00</button>
-            <button class="slot is-booked" disabled>10:00</button>
-            <button class="slot is-booked" disabled>11:00</button>
-            <button class="slot is-available" data-time="12:00">12:00</button>
-            <button class="slot is-available" data-time="13:00">13:00</button>
-            <button class="slot is-booked" disabled>14:00</button>
-            <button class="slot is-available" data-time="15:00">15:00</button>
-            <button class="slot is-available" data-time="16:00">16:00</button>
-            <button class="slot is-available" data-time="17:00">17:00</button>
-            <button class="slot is-available" data-time="18:00">18:00</button>
-            <button class="slot is-available" data-time="19:00">19:00</button>
-            <button class="slot is-available" data-time="20:00">20:00</button>
-            <button class="slot is-available" data-time="21:00">21:00</button>
-            <button class="slot is-available" data-time="22:00">22:00</button>
-            <button class="slot is-available" data-time="23:00">23:00</button>
-            <button class="slot is-available" data-time="24:00">24:00</button>
-          </div>
-          <a href="#booking" class="about__cta court__cta">Book a Court</a>
-        </div>
-      </article>
-
-      <!-- F -->
-      <article class="court">
-        <div class="court__media"><img src="assets/img/court.webp" alt="Indoor Court F"></div>
-        <div class="court__body">
-          <div class="court__row">
-            <h3 class="court__name">Indoor Court F</h3>
-            <span class="badge is-available">Available</span>
-          </div>
-          <ul class="court__meta">
-            <li>Surface: Acrylic</li><li>Format: Doubles (2v2)</li>
-          </ul>
-          <div class="slots" role="listbox" aria-label="Time slots for Indoor Court F">
-            <button class="slot is-booked" disabled>06:00</button>
-            <button class="slot is-available" data-time="07:00">07:00</button>
-            <button class="slot is-available" data-time="08:00">08:00</button>
-            <button class="slot is-available" data-time="09:00">09:00</button>
-            <button class="slot is-available" data-time="10:00">10:00</button>
-            <button class="slot is-available" data-time="11:00">11:00</button>
-            <button class="slot is-available" data-time="12:00">12:00</button>
-            <button class="slot is-available" data-time="13:00">13:00</button>
-            <button class="slot is-available" data-time="14:00">14:00</button>
-            <button class="slot is-available" data-time="15:00">15:00</button>
-            <button class="slot is-available" data-time="16:00">16:00</button>
-            <button class="slot is-available" data-time="17:00">17:00</button>
-            <button class="slot is-available" data-time="18:00">18:00</button>
-            <button class="slot is-available" data-time="19:00">19:00</button>
-            <button class="slot is-available" data-time="20:00">20:00</button>
-            <button class="slot is-available" data-time="21:00">21:00</button>
-            <button class="slot is-available" data-time="22:00">22:00</button>
-            <button class="slot is-available" data-time="23:00">23:00</button>
-            <button class="slot is-available" data-time="24:00">24:00</button>
-          </div>
-          <a href="#booking" class="about__cta court__cta">Book a Court</a>
         </div>
       </article>
     </div>
@@ -365,75 +253,7 @@
   </section>
 
   <!-- MEMBERSHIP PRICING -->
-  <section id="membership" class="mships">
-    <div class="mships__head">
-      <p class="mships__eyebrow">MEMBERSHIP</p>
-      <h2 class="mships__title">Choose Your Membership</h2>
-      <p class="mships__lead">Enjoy exclusive court discounts, café deals, and premium benefits.</p>
-    </div>
-
-    <div class="mships__grid">
-      <!-- BASIC -->
-      <article class="mcard">
-        <span class="mcard__ribbon">SAVE 40%</span>
-        <h3 class="mcard__name">Basic</h3>
-
-        <div class="mcard__price">
-          <div class="mcard__was">Rp299.000 / month</div>
-          <div class="mcard__now"><span>Rp</span>179.000<span>/month</span></div>
-        </div>
-
-        <button class="mcard__cta">Select</button>
-
-        <ul class="mcard__feat">
-          <li>10% discount on court (weekdays)</li>
-          <li>5% discount at café</li>
-          <li>1 guest pass per month</li>
-        </ul>
-      </article>
-
-      <!-- GOLD -->
-      <article class="mcard is-popular">
-        <span class="mcard__ribbon">BEST VALUE</span>
-        <h3 class="mcard__name">Gold</h3>
-
-        <div class="mcard__price">
-          <div class="mcard__was">Rp449.000 / month</div>
-          <div class="mcard__now"><span>Rp</span>289.000<span>/month</span></div>
-        </div>
-
-        <button class="mcard__cta">Select</button>
-
-        <ul class="mcard__feat">
-          <li>15% discount on court (all day)</li>
-          <li>10% discount at café</li>
-          <li>Free locker access</li>
-          <li>2 guest passes per month</li>
-        </ul>
-      </article>
-
-      <!-- PLATINUM -->
-      <article class="mcard">
-        <span class="mcard__ribbon">SAVE 35%</span>
-        <h3 class="mcard__name">Platinum</h3>
-
-        <div class="mcard__price">
-          <div class="mcard__was">Rp699.000 / month</div>
-          <div class="mcard__now"><span>Rp</span>449.000<span>/month</span></div>
-        </div>
-
-        <button class="mcard__cta">Select</button>
-
-        <ul class="mcard__feat">
-          <li>20% discount on court (all day)</li>
-          <li>15% discount at café</li>
-          <li>Locker & laundry included</li>
-          <li>4 guest passes per month</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
+ 
   <!-- GALLERY (Carousel) -->
   <section id="gallery" class="gallery">
     <div class="gallery__head">
@@ -813,14 +633,14 @@
     </article>
 
     <!-- Item 4 -->
-    <article class="faq__item">
+    <!-- <article class="faq__item">
       <button class="faq__q" aria-expanded="false">
         Are memberships available?
       </button>
       <div class="faq__a">
         <p>Yes, we offer several membership tiers with benefits like café discounts and reduced court rates. Check the Pricing section for details.</p>
       </div>
-    </article>
+    </article> -->
   </div>
 </section>
 
@@ -839,7 +659,6 @@
       <ul>
         <li><a href="#courts">Courts</a></li>
         <li><a href="#facility">Facilities</a></li>
-        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#coaching">Coaching</a></li>
         <li><a href="#blog">Blog</a></li>
@@ -851,7 +670,7 @@
     <div class="footer__contact">
       <h4 class="footer__head">Contact</h4>
       <ul>
-        <li><a href="https://maps.app.goo.gl/KeNxaT2kYMYhdYrK8" target="_blank">Jl. Contoh Raya No. 123, Jakarta</a></li>
+        <li><a href="https://maps.app.goo.gl/KeNxaT2kYMYhdYrK8" target="_blank">Jl. Metro Pondok Indah No.31, Pd. Pinang, Kec. Kebayoran Lama, jakarta, Daerah Khusus Ibukota Jakarta 12310</a></li>
         <li><a href="tel:+62123456789">+62 812-3456-789</a></li>
         <li><a href="mailto:hello@southpadel.id">hello@southpadel.id</a></li>
       </ul>
@@ -1155,6 +974,32 @@ document.querySelectorAll('.faq__q').forEach(btn=>{
     }
   });
 });
+</script>
+<script>
+(function(){
+  const hero = document.querySelector('.hero--image');
+  const bg = document.querySelector('.hero--image .hero-bg img');
+
+  if(!hero || !bg) return;
+
+  const maxZoom = 3.12;   // seberapa zoom maksimum
+  const sensitivity = 0.35; // kecil = zoom pelan
+
+  function onScroll(){
+    const rect = hero.getBoundingClientRect();
+    const windowH = window.innerHeight;
+
+    // progress scroll (0 = atas hero, 1 = keluar layar)
+    let progress = Math.min(Math.max(rect.bottom / windowH, -1), 1);
+    progress = 1 - Math.abs(progress); // ubah ke nilai yang lebih intuitif
+
+    const scale = 1 + (maxZoom - 1) * (progress * sensitivity);
+    bg.style.transform = `scale(${scale})`;
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
 </script>
 
 
